@@ -11,6 +11,7 @@ body {
   background: #3b3d43;
 }
 
+/* Links in nav styling */
 button {
   border: 0;
   padding: 0;
@@ -20,6 +21,7 @@ button {
   cursor: pointer;
 }
 
+/* Navbar container */
 .navbar {
   position: fixed;
   z-index: 1;
@@ -35,6 +37,7 @@ button {
   font-family: "Poppins";
 }
 
+/* On click overlay */
 .navbar-overlay {
   position: fixed;
   z-index: 2;
@@ -48,11 +51,13 @@ button {
   transition: 0.5s;
 }
 
+/* When the body has the 'open' class, make the navbar overlay visible */
 body.open .navbar-overlay {
   visibility: visible;
   opacity: 1;
 }
 
+/* Burger icon styling */
 .navbar-burger {
   position: absolute;
   top: 0;
@@ -69,6 +74,7 @@ body.open .navbar-overlay {
   font-size: 16px;
 }
 
+/* Navbar menu styling */
 .navbar-menu {
   position: fixed;
   z-index: 3;
@@ -87,11 +93,13 @@ body.open .navbar-overlay {
   transition: all 0.3s;
 }
 
+/* When the body has the 'open' class, show the navbar menu */
 body.open .navbar-menu {
   translate: 0 0;
   visibility: visible;
 }
 
+/* Styling for navbar menu buttons */
 .navbar-menu > button {
   color: rgba(255, 255, 255, 0.5);
   background: transparent;
@@ -103,34 +111,61 @@ body.open .navbar-menu {
   color: inherit;
 }
 
-.navbar-menu > button.active.hover {
-  color: rgba(255, 255, 255, 0.75);
+/* Hover state for active navbar menu buttons */
+.navbar-menu > button.active:hover {
+  color: rgba(215, 27, 27, 0.75);
 }
 
+/* Hide burger icon in full screen */
 .burger-icon {
   display: none;
 }
 
+/* Mobile */
 @media only screen and (max-width: 600px) {
+  /* Keeps the burger menu in the corner */
   .navbar .burger-icon {
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    cursor: pointer;
+  }
+
+  /* Centers the menu items */
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-menu > button {
+    font-size: 2rem;
   }
 }
 
-@media only screen and (min-width: 600px) {
+/* Hides side menu over 600px */
+@media only screen and (min-width: 601px) {
   .navbar {
     justify-content: space-between;
     padding: 0 0 0 16px;
   }
 
+  /* Hiding the navbar overlay on larger screens */
   .navbar-overlay {
     display: none;
   }
 
+  /* Hiding the burger icon on larger screens */
   .navbar-burger {
     display: none;
   }
 
+  /* Adjusting styles for the navbar menu on larger screens */
   .navbar-menu {
     position: static;
     translate: 0 0;
