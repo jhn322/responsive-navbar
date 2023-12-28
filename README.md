@@ -2,6 +2,10 @@
 
 ### Links:
 
-[GitHub Pages](https://jhn322.github.io/parallax-website/)
+[GitHub Pages](https://jhn322.github.io/responsive-navbar/)
 
-[Netlify](https://jhn-parallax-website.netlify.app/)
+[Netlify](https://jhn-responsive-navbar.netlify.app/)
+
+### Info:
+
+A simpler navbar with functionality and responsive design in mind. Works great as a starting point for both desktop and and mobile sites of any kind.
